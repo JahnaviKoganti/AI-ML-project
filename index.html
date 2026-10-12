@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Aurelia AI — Intelligent Luxury Commerce</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="logo serif">AURELIA<small>AI COMMERCE</small></div>
+<nav><button class="on" data-t="shop">Boutique</button><button data-t="chat">Concierge</button><button data-t="ins">AI Insights</button></nav>
+<div class="cart" id="cart">🛍 0 · ₹0</div></header>
+<div class="hero"><h1>Luxury, <em>intelligently</em> curated</h1><p>An e-commerce prototype powered by machine learning: personalised recommendations, natural-language search and review sentiment analysis.</p>
+<div class="sb"><input id="q" placeholder="Try: blue leather watch under 20000"><button class="btn" id="go">Search</button></div>
+<div class="sug" id="sug"></div></div>
+<main>
+<section id="shop" class="on">
+<h2 id="ttl" style="scroll-margin-top:90px">The Collection</h2><p class="sub" id="parsed">Click ♡ or Add on items, and watch the recommendations adapt.</p>
+<div class="grid" id="grid"></div>
+<h2>Recommended for you</h2><p class="sub">Content-based filtering using cosine similarity</p>
+<div id="recs"></div></section>
+<section id="chat"><h2>AI Concierge</h2><p class="sub">Rule-based NLP intent parser: extracts category, budget and style from plain English</p>
+<div class="chat" id="log"></div><div class="sb" style="max-width:none"><input id="ci" placeholder="e.g. gift jewellery under 6000"><button class="btn" id="cs">Send</button></div></section>
+<section id="ins"><h2>AI Insights</h2><p class="sub">Transparent models, nothing hidden</p>
+<div class="two"><div class="box"><h3>Your taste profile</h3><p class="sub">User vector built from your clicks (view +1, like +3, cart +5)</p><div id="pv"><span class="sub">Interact with products to build your profile.</span></div></div>
+<div class="box"><h3>Review sentiment analyser</h3><p class="sub">Lexicon model with negation and intensifier handling</p>
+<textarea id="rt" rows="3" placeholder="Type a product review…">The watch is absolutely stunning, but the strap is not very comfortable.</textarea>
+<div class="row"><button class="btn" id="an">Analyse</button><span id="so"></span></div><div id="rs"></div></div></div>
+<div class="box" style="margin-top:18px"><h3>Customer review mining</h3><p class="sub">Every review is scored automatically</p><div id="rvs"></div></div>
+<div class="note" style="margin-top:18px"><b>Algorithms used:</b> TF-style tag vectors · cosine similarity · user-profile learning (online) · tokenisation + sentiment lexicon · regex NLP intent extraction</div></section>
+</main><footer>Aurelia AI · AI/ML micro-project prototype · All models run locally in your browser</footer>
+<script src="script.js"></script>
+</body></html>
